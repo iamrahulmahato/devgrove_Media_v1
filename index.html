@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devgrove.Media</title>
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0138; /* dark background */
+            color: #F8EDED; /* light off-white text */
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden; /* hide both vertical and horizontal scroll bars */
+        }
+        /* Container for hero content */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            height: 100vh;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #F8EDED;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #D9D6E7;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #FF7EA9;
+            color: #0A0138;
+            border: 3px solid #F8EDED;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease;
+            margin-bottom: 20px;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            background: #FFA5C1;
+        }
+        /* Decorative circles */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        /* Big blue circle top left */
+        .shape.blue-large {
+            width: 220px;
+            height: 220px;
+            background: #1C6CF3;
+            top: -80px;
+            left: -120px;
+        }
+        /* Small teal circle near heading */
+        .shape.blue-small {
+            width: 50px;
+            height: 50px;
+            background: #6DC1FF;
+            top: 10%;
+            left: 70%;
+        }
+        /* Small pink dot repositioned away from text */
+        .shape.pink-small {
+            width: 14px;
+            height: 14px;
+            background: #FF82B2;
+            bottom: 25%;
+            left: 15%;
+        }
+        /* Small peach circle bottom left */
+        .shape.peach-small {
+            width: 80px;
+            height: 80px;
+            background: #F9BFC3;
+            bottom: 10%;
+            left: 5%;
+        }
+        /* Purple circle top right */
+        .shape.purple-large {
+            width: 160px;
+            height: 160px;
+            background: #9675E5;
+            top: 10%;
+            right: 5%;
+        }
+        /* Small orange circle repositioned away from text */
+        .shape.orange-small {
+            width: 24px;
+            height: 24px;
+            background: #FFA70A;
+            bottom: 30%;
+            right: 15%;
+        }
+        /* Big yellow circle bottom right */
+        .shape.yellow-large {
+            width: 220px;
+            height: 220px;
+            background: #F9D76B;
+            bottom: -50px; /* position circle so it's partially off-screen like original design */
+            right: -50px;
+        }
+        /* Footer or bottom navigation */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            color: #978BBC;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+            background-color: #0A0138;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 80vh;
+                padding: 40px 20px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .cta-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            .shape.blue-large {
+                width: 160px;
+                height: 160px;
+                top: -60px;
+                left: -120px;
+            }
+            .shape.purple-large {
+                width: 120px;
+                height: 120px;
+                top: 10%;
+                right: -20px;
+            }
+            .shape.yellow-large {
+                /* Yellow circle on mobile */
+                display: block;
+                width: 140px;
+                height: 140px;
+                bottom: 20px;
+                right: 10px;
+            }
+            .shape.peach-small {
+                /* Peach circle on mobile */
+                display: block;
+                width: 70px;
+                height: 70px;
+                bottom: 70px;
+                left: 10px;
+            }
+            .shape.pink-small {
+                /* Small pink dot on mobile */
+                display: block;
+                width: 14px;
+                height: 14px;
+                bottom: 110px;
+                left: 40%;
+            }
+            .shape.orange-small {
+                /* Small orange dot on mobile */
+                display: block;
+                width: 20px;
+                height: 20px;
+                bottom: 80px;
+                right: 40%;
+            }
+            .footer {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative shapes -->
+    <div class="shape blue-large"></div>
+    <div class="shape blue-small"></div>
+    <div class="shape pink-small"></div>
+    <div class="shape peach-small"></div>
+    <div class="shape purple-large"></div>
+    <div class="shape orange-small"></div>
+    <div class="shape yellow-large"></div>
+
+    <div class="hero">
+        <h1>Video Editing &amp; Content Creation, reimagined</h1>
+        <p>Devgrove.Media crafts compelling visuals and intelligent content through cutting‑edge video editing, inspiring content creation and AI‑driven solutions.</p>
+        <a href="https://www.canva.com/design/DAGwKh_vndg/8t6czSDLzQKibCNnXjeumA/edit" target="_blank" class="cta-btn">Learn more about us</a>
+    </div>
+
+    <div class="footer">
+        &copy; <span id="year"></span> Devgrove.Media. All rights reserved.
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
